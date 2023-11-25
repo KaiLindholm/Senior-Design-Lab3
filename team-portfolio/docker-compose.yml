@@ -1,0 +1,16 @@
+version: "3.8"
+
+name: senior-design-lab3
+
+services: 
+  app:
+    container_name: portfolio
+    build: ./
+    command: bundle exec puma -C config/puma.rb
+    working_dir: /app
+    volumes: 
+      - .:/app
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
