@@ -36,5 +36,7 @@ COPY . .
 # RUN bundle exec rake assets:precompile
 
 # CMD bundle exec puma -C config/puma.rb
+RUN useradd -ms /bin/bash app
+USER app
 
 EXPOSE $PORT

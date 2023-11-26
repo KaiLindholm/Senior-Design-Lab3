@@ -46,6 +46,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap (5.3.2)
       autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.8, < 3)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -193,6 +194,7 @@ GEM
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    popper_js (2.11.8)
     protobuf-cucumber (3.10.8)
       activesupport (>= 3.2)
       middleware
@@ -344,6 +346,7 @@ DEPENDENCIES
   omniauth-github (~> 2.0.0)
   omniauth-rails_csrf_protection
   pg (~> 0.15)
+  popper_js (~> 2.11.8)
   pry
   pry-byebug
   puma
