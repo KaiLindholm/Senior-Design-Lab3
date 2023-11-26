@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>TeamPortfolio</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
+<%= render 'layouts/navigation' %>
 <%= render 'layouts/flash' %>
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4">Ctrl-Alt-Delete - Team 13</h1>
+  <p class="lead">Look around our page to take a look at some of our personal and team projects!</p>
+</div>
+
 <%= yield %>
 
 </body>
