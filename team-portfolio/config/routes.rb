@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-    resources :users, only: %i[:new, :create]
-    resources :sessions, only: %i[:new, :create]
+    resources :user, only: %i[new create]
+    resources :sessions, only: %i[new create]
 
     root :to => 'pages#index'
 
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get 'gustav' => 'pages#gustav'
 
     #User Routes
-    get 'signup' => 'users#new'
+    get 'signup' => 'user#new'
     get 'signup_success' => 'pages#signup_success', as: :signup_success
     get 'logout' => 'sessions#destroy'
     get 'auth/github/callback' => 'sessions#SSO'

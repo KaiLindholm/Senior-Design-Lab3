@@ -14,9 +14,9 @@ class PagesController < ApplicationController
     def gustav 
     end
 
-    before_action :ensure_signed_in!
+    # before_action :ensure_signed_in!
     def signup_success
-        
+
     end
 
 end
