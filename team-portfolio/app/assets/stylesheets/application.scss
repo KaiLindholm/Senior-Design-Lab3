@@ -16,23 +16,22 @@
   
 @import "bootstrap";
 
-.nav-container {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;   
-}
-.jumbotron {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;   
-}
-.jumbotron h1 {
-    padding-left: 5%;
-}
-.jumbotron p {
-    padding-left: 5%;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-#footer-p {
-    color: #6c757d;
-    padding-left: 5%;
+footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
     font-size: 8px;
+    width: 100%;
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
+
+footer p {
+    color: #6c757d;
+    text-align: center;
 }

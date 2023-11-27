@@ -1,44 +1,58 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// .img-fluid {
+//     width: 300px; 
+//     height: 300px; 
+//     object-fit: cover;  
+// }
 
-.headshot-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: left;
-    padding-left: 20px;
-    padding-right: 20px;    
-    margin: 20px;
-    background-color: gray;
-}
+// .row {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     align-items: left;
+//     padding-left: 20px;
+//     padding-right: 20px;    
+//     margin: 20px;
+// }
 
+// .headshot-container {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     align-items: left;
+//     padding-left: 5px;
+//     padding-right: 5px;    
+//     margin: 5px 5px 10px 10px; 
+//     background-color: gray;
+//     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+// }
 
-.img-fluid {
-    width: 300px; 
-    height: 300px; 
-    object-fit: cover;
-}
+// .player-card {
+//     position: relative; 
+//     text-align: center;
 
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: left;
-    padding-left: 20px;
-    padding-right: 20px;    
-    margin: 20px;
-}
+//     img {
+//         width: 300px; 
+//         height: 300px; 
+//         object-fit: cover;
+//         transition: all 0.3s ease-in-out;
+//     }
 
-.player-card {
-    display: flex;
-    flex-direction: column;
-    border-color: aqua;
-}
-.player-card p {
-    padding-top: 10px; 
-    padding-bottom: 20px;
-}
+//     p {
+//         position: absolute; 
+//         top: 50%; 
+//         left: 50%; 
+//         transform: translate(-50%, -50%); 
+//         opacity: 0; 
+//         transition: opacity 0.3s ease-in-out; 
+//         padding-top: 10px; 
+//         padding-bottom: 20px;
+//     }
+
+//     img:hover {
+//         opacity: 0.5;
+//         transform: scale(1.1);
+//     }
+// }
 
 #team-card {
     font-weight: bold;
@@ -48,6 +62,7 @@
     background-position: center;
     height: 50vh; 
     width: 100%;
+    padding: 0px;
 }
 
 .mask {
@@ -70,26 +85,40 @@
     font-size: 5em;
 }
 
-#team-card p {
-    font-size: 2em;
-}   
-
-.meet-action {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: left;
-    padding-left: 20px;
-    padding-right: 20px;    
-    margin: 20px;
-    background-color: hsl(0, 0%, 94%);
+@media (max-width: 800px) {
+    #team-card h1 {
+        font-size: 4em;
+    }
 }
 
-.meet-action h2 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px; 
+@media (max-width: 600px) {
+    #team-card h1 {
+        font-size: 3em;
+    }
 }
+
+@media (max-width: 400px) {
+    #team-card h1 {
+        font-size: 2em;
+    }
+}
+
+// .meet-action {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     align-items: left;
+//     padding-left: 20px;
+//     padding-right: 20px;    
+//     margin: 20px;
+//     background-color: hsl(0, 0%, 94%);
+// }
+
+// .meet-action h2 {
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+//     padding-left: 20px; 
+// }
 
 hr {
     border-top: 5px solid #82888e89;

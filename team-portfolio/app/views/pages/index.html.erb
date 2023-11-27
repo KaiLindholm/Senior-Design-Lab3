@@ -2,7 +2,7 @@
 <!-- Background image -->
 <% content_for :title, "Team Portfolio" %>
 
-<div id="team-card" class="p-5 text-center bg-image">
+<div id="team-card" class="p-5 text-center bg-image drop-shadow-lg">
     <div class="mask">
       <div class="text-white">
         <h1 class="mb-3">Ctrl-Alt-Delete - Team 13</h1>
@@ -12,32 +12,36 @@
       </div>
     </div>
 </div>
-
 <div id="meet-action"class="p-4 shadow-4 rounded-3">
   <h2>Meet the team!</h2>
 </div>
 
-<div class="headshot-container">
-  <div class="row">
-    <div class="col-md-3 player-card">
-      <h3> Kai Lindholm </h3>
-      <%= image_tag("kai-headshot.jpg", class: "img-fluid") %>
-      <p></p>
+<div id="headshot-container" class="bg-gray-400 bg-shadow-md pd-4 mx-10 rounded-md">
+  <div class="flex flex-wrap justify-center m-10">
+
+    <div class="p-4 flex flex-col flex-wrap items-center text-center w-full sm:w-1/2 md:w-1/4">
+      <h3 class="w-full text-center"> Kai Lindholm </h3>
+      <%= link_to image_tag("kai-headshot.jpg", class: "object-scale-down max-h-full drop-shadow-md rounded-md m-auto"), :kai %>
     </div>
-    <div class="col-md-3 player-card">
-      <h3> Gustav Champlin </h3>
-      <%= image_tag("gustav-headshot.jpg", class: "img-fluid") %>
+
+    <div class="p-4 flex flex-col flex-wrap  items-center text-center w-full sm:w-1/2 md:w-1/4">
+      <h3 class="w-full text-center"> Gustav Champlin </h3>
+      <%= link_to image_tag("kai-headshot.jpg", class: "object-scale-down max-h-full drop-shadow-md rounded-md m-auto"), :gustav %>
     </div>
-    <div class="col-md-3 player-card">
-      <h3> Joe Shanks </h3>
-      <%= image_tag("joe-headshot.jpg", class: "img-fluid") %>
+
+    <div class="p-4 flex flex-col  flex-wrap items-center text-center w-full sm:w-1/2 md:w-1/4">
+      <h3 class="w-full text-center"> Joe Shanks </h3>
+      <%= link_to image_tag("kai-headshot.jpg", class: "object-scale-down max-h-full drop-shadow-md rounded-md m-auto"), :joe %>
     </div>
-    <div class="col-md-3 player-card">
-      <h3> James Ostrowski </h3>
-      <%= image_tag("james-headshot.jpg", class: "img-fluid") %>
+
+    <div class="p-4 flex flex-col  flex-wrap items-center text-center w-full sm:w-1/2 md:w-1/4">
+      <h3 class="w-full text-center"> James Ostrowski </h3>
+      <%= link_to image_tag("kai-headshot.jpg", class: "object-scale-down max-h-full drop-shadow-md rounded-md m-auto"), :james %>
     </div>
+
   </div>
 </div>
+
 <hr>
 
 <%= render 'layouts/team_projects' %>

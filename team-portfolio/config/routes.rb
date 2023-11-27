@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
     root :to => 'pages#index'
 
-    get 'kai' => 'pages#kai'
-    get 'james' => 'pages#james'
-    get 'joe' => 'pages#joe'
-    get 'gustav' => 'pages#gustav'
+    get 'kai' => 'pages#kai', as: :kai
+    get 'james' => 'pages#james', as: :james
+    get 'joe' => 'pages#joe', as: :joe
+    get 'gustav' => 'pages#gustav', as: :gustav
 
     #User Routes
     get 'signup' => 'user#new'

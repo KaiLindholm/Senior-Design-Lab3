@@ -1,14 +1,36 @@
 <!-- FILEPATH: /Users/kailindholm/Documents/Fall 2023/SenDesign /senior-design-lab03/team-portfolio/app/views/pages/kai.html.erb -->
 <% content_for :title, "Kai's Portfolio" %>
+<div class="profile-container bg-white shadow-md rounded-md mt-10 p-8">
+<div>
+  <%= image_tag("kai-headshot.jpg", alt: "Kai's Headshot", class: "w-1/4 h-1/4 shadow-md profile-image") %>
+</div>
+</div>
 
-<h1>Kai's Portfolio</h1>
+    <h2 class="text-2xl mt-6 mb-4 text-center">Project Highlights</h2>
+<div class="grid grid-cols-3 gap-4">    
+    <div class="bg-white p-4 shadow-md">
+        <img src="project1.jpg" alt="Project 1" class="w-full h-auto">
+        <h3 class="text-xl font-bold mt-4">Project 1</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
 
-<h2>Headshot</h2>
-<%= image_tag("kai-headshot.jpg", class: "img-fluid") %>
+    </div>
+    <div class="bg-white p-4 shadow-md">
+        <img src="project2.jpg" alt="Project 2" class="w-full h-auto">
+        <h3 class="text-xl font-bold mt-4">Project 2</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
 
-<h2>Project Highlights</h2>
-<ul>
-<li>Project 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-<li>Project 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-<li>Project 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-</ul>
+    </div>
+    <div class="bg-white p-4 shadow-md">
+        <img src="project3.jpg" alt="Project 3" class="w-full h-auto">
+        <h3 class="text-xl font-bold mt-4">Project 3</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+
+    </div>
+</div>
+
