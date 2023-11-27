@@ -6,7 +6,7 @@
 
 <%= link_to "Back", root_path %>
 
-<%= form_for @user, url: signup_path do |f| %>
+<%= form_for @user, url: user_index_path do |f| %>
   <%= render "shared/form_errors", object: f.object %>
 
   <div>
