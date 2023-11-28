@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   private 
   def ensure_signed_in!
     unless current_user
-      redirect_to root_path 
-      flash[:warning] = "You need to sign in before accessing this page." 
+      redirect_to new_session_path
+      flash[:warning] = "You must login or signup to continue." 
     end
   end
 
