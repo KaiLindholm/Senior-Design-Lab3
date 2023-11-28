@@ -1,12 +1,8 @@
 <%= form_for(Comment.new, url: create_comment_path) do |f| %>
-    <%= hidden_field_tag :page_name, page_name %>
+    <%= f.hidden_field :page, value: page_name %>
     <p>
-      <%= f.label :commenter %><br>
-      <%= f.text_field :commenter %>
-    </p>
-    <p>
-      <%= f.label :body %><br>
-      <%= f.text_area :body %>
+      <%= f.label :content %><br>
+      <%= f.text_area :content %>
     </p>
     <p>
       <%= f.submit %>

@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
-    berfore_action :ensure_signed_in!, only: [:create]
+    before_action :ensure_signed_in!, only: [:create]
     def create
+        puts comment_params[:page]
         @comment = current_user.comments.create(comment_params)
-        redirect_to 'james'
+        redirect_to root_path
     end
 
     private 
