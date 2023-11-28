@@ -1,0 +1,7 @@
+<% comments = Comment.where(page_name: page_name) %>
+<% comments.each do |comment| %>
+  <p>
+    <strong><%= comment.commenter %>:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
