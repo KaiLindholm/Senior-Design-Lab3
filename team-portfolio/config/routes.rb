@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     resources :user, only: %i[new create]
     resources :sessions, only: %i[new create]
+    resources :comments
 
     root :to => 'pages#index'
 
