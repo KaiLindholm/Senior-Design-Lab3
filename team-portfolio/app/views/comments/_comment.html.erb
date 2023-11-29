@@ -1,0 +1,14 @@
+<div class="flex flex-col bg-gray-100 p-4 rounded-lg relative w-3/4" id="<%= "comment_#{comment.id}" %>">
+    <div class="grid grid-cols-2">
+        <p class="flex-col text-lg mr-10 m-0 font-semibold"><%= comment.user.name %></p>
+        <%= link_to comment_path(comment), method: :delete, class: "text-red-500 p-0 m-0", remote: true do %>
+            <%= raw('<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-0 p-0" viewBox="0 0 20 20" fill="currentColor">
+                <path class="relative top-0 right-0" fill-rule="evenodd" d="M10 1a9 9 0 100 18 9 9 0 000-18zm4.95 10.536l-1.414 1.414L10 11.414l-3.536 3.536-1.414-1.414L8.586 10 5.05 6.464l1.414-1.414L10 8.586l3.536-3.536 1.414 1.414L11.414 10l3.536 3.536z" clip-rule="evenodd" />
+            </svg>') %>
+        <% end %>
+        <span class="text-xs flex-row p-0 m-0 flex-col1"> (<%= comment.created_at.strftime('%b %e') %>) </span>
+    </div>
+    <span class="text-gray-800-xl overflow-hidden break-words">
+        <%= comment.content %>
+    </span>
+</div>

@@ -55,31 +55,24 @@
 // }
 
 #team-card {
-    font-weight: bold;
     background-image: url("hero-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50vh; 
-    width: 100%;
-    padding: 0px;
 }
 
-.mask {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: vertical;
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 100%;
-    width: 100%;
-}
+// .mask {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: vertical;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     height: 100%;
+//     width: 100%;
+// }
 
-.text-white {
+// .text-white {
 
-    font-weight: bold;
-    color: white;
-}
+//     font-weight: bold;
+//     color: white;
+// }
 
 #team-card h1 {
     font-size: 5em;

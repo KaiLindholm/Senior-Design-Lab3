@@ -17,7 +17,5 @@ Rails.application.routes.draw do
     get 'auth/github/callback' => 'sessions#SSO'
 
 
-    post '/comments', to: 'comments#create', as: 'create_comment'
-
-    
+    post '/comments', to: 'comments#create', as: 'create_comment'    
 end

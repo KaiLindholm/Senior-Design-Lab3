@@ -1,4 +1,6 @@
 <% content_for :title, "Gustav's Portfolio" %>
-<%= render 'comments/index', page_name: 'gustav' %>
 
-<%= render 'comments/form', page_name: 'gustav' %>
+<div class="max-w-md mx-auto space-y-4 mt-8">
+    <%= render @comments %>
+</div>
+<%= render 'comments/form', page_name: 'kai' %>
