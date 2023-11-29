@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     resources :user, only: %i[new create]
     resources :sessions, only: %i[new create]
+    resources :comments
 
     root :to => 'pages#index'
 
@@ -14,6 +15,9 @@ Rails.application.routes.draw do
     get 'signup_success' => 'pages#signup_success', as: :signup_success
     get 'logout' => 'sessions#destroy'
     get 'auth/github/callback' => 'sessions#SSO'
+
+
+    post '/comments', to: 'comments#create', as: 'create_comment'
 
     
 end
