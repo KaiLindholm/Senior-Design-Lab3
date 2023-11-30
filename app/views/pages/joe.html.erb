@@ -1,6 +1,78 @@
-<% content_for :title, "Joeseph's Portfolio" %>
+<!-- FILEPATH: /Users/kailindholm/Documents/Fall 2023/SenDesign /senior-design-lab03/team-portfolio/app/views/pages/kai.html.erb -->
+<% content_for :title, "Joe's Portfolio" %>
+<div class="profile-container bg-white shadow-md rounded-md mt-10 p-8">
+      <h1 class="text-3xl font-bold mb-4 text-left  ">Kai's Portfolio</h1>
 
-<div class="max-w-md mx-auto space-y-4 mt-8">
+<div class="flex">
+    <div class="w-1/4">
+        <%= image_tag("joe-headshot.jpg", alt: "Kai's Headshot", class: "w-full h-auto shadow-lg") %>
+        <div class="social-links mt-6 flex-wrap">
+            <h2 class="text-2xl mb-4">Connect with me</h2>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="block mb-2">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="block">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="flex-wrap w-1/4 p-4">
+        <h3 class="text-2xl sm:text-xl xs:text-lg mb-4 font-bold mt-4">Bio</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+    </div>
+    <div class="flex-wrap w-1/4 p-4">
+        <h3 class="text-2xl sm:text-xl xs:text-lg mb-4 font-bold mt-4">Hobbies</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+    </div>
+</div>
+
+</div>
+    <h2 class="text-2xl mt-6 mb-4 text-center">Project Highlights</h2>
+<div class="grid grid-cols-3 gap-4">    
+    <div class="bg-white p-4 shadow-md">
+        <%
+=begin%>
+ <img src="project1.jpg" alt="Project 1" class="w-full h-auto"> 
+<%
+=end%>
+        <h3 class="text-xl font-bold mt-4">Project 1</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+
+    </div>
+    <div class="bg-white p-4 shadow-md">
+        <%
+=begin%>
+ <img src="project2.jpg" alt="Project 2" class="w-full h-auto"> 
+<%
+=end%>
+        <h3 class="text-xl font-bold mt-4">Project 2</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+
+    </div>
+    <div class="bg-white p-4 shadow-md">
+        <%
+=begin%>
+ <img src="project3.jpg" alt="Project 3" class="w-full h-auto"> 
+<%
+=end%>
+        <h3 class="text-xl font-bold mt-4">Project 3</h3>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+    </div>
+</div>
+
+<div class="flex flex-wrap w-1/4 items-center justify-center p-4 max-w-md mx-auto space-y-4 mt-8 max-h-80 overflow-y-auto" id="comments">
     <%= render @comments %>
 </div>
+
 <%= render 'comments/form', page_name: 'kai' %>
