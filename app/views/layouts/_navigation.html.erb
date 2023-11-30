@@ -1,0 +1,41 @@
+<div class="nav-container">
+  <nav class="bg-white shadow-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="/" class="text-lg font-bold">Home</a>
+        <ul id="dropdownMenu" class="lg:flex md:hidden sm:hidden ml-auto items-center space-x-8">
+          <li><a href="<%= kai_path %>" class="text-gray-600 hover:text-black">Kai</a></li>
+          <li><a href="<%= gustav_path %>" class="text-gray-600 hover:text-black">Gustav</a></li>
+          <li><a href="<%= joe_path %>" class="text-gray-600 hover:text-black">Joe</a></li>
+          <li><a href="<%= james_path %>" class="text-gray-600 hover:text-black">James</a></li>
+          <% if current_user.present? %>
+            <li><a href="<%= logout_path %>" class="text-gray-600 hover:text-black">Log Out</a> |  <%= "Welcome, #{current_user.name}!" %> </li>
+          <% else %>
+            <li><a href="<%= new_session_path %>" class="text-gray-600 hover:text-black">Login</a></li>
+          <% end %>        
+        </ul>
+        <button id="mobileMenuButton" class="block lg:hidden  md:hidden focus:outline-none">
+          <svg class="h-6 w-6 p-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M4 6h16M4 12h16m-7 6h7"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+  // JavaScript to toggle visibility of the dropdown menu on mobile
+  const mobileMenuButton = document.getElementById('mobileMenuButton');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+</script>

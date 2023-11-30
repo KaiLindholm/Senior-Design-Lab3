@@ -1,0 +1,119 @@
+// .img-fluid {
+//     width: 300px; 
+//     height: 300px; 
+//     object-fit: cover;  
+// }
+
+// .row {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     align-items: left;
+//     padding-left: 20px;
+//     padding-right: 20px;    
+//     margin: 20px;
+// }
+
+// .headshot-container {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     align-items: left;
+//     padding-left: 5px;
+//     padding-right: 5px;    
+//     margin: 5px 5px 10px 10px; 
+//     background-color: gray;
+//     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+// }
+
+// .player-card {
+//     position: relative; 
+//     text-align: center;
+
+//     img {
+//         width: 300px; 
+//         height: 300px; 
+//         object-fit: cover;
+//         transition: all 0.3s ease-in-out;
+//     }
+
+//     p {
+//         position: absolute; 
+//         top: 50%; 
+//         left: 50%; 
+//         transform: translate(-50%, -50%); 
+//         opacity: 0; 
+//         transition: opacity 0.3s ease-in-out; 
+//         padding-top: 10px; 
+//         padding-bottom: 20px;
+//     }
+
+//     img:hover {
+//         opacity: 0.5;
+//         transform: scale(1.1);
+//     }
+// }
+
+#team-card {
+    background-image: url("hero-bg.jpg");
+}
+
+// .mask {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: vertical;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     height: 100%;
+//     width: 100%;
+// }
+
+// .text-white {
+
+//     font-weight: bold;
+//     color: white;
+// }
+
+#team-card h1 {
+    font-size: 5em;
+}
+
+@media (max-width: 800px) {
+    #team-card h1 {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 600px) {
+    #team-card h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 400px) {
+    #team-card h1 {
+        font-size: 2em;
+    }
+}
+
+// .meet-action {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     align-items: left;
+//     padding-left: 20px;
+//     padding-right: 20px;    
+//     margin: 20px;
+//     background-color: hsl(0, 0%, 94%);
+// }
+
+// .meet-action h2 {
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+//     padding-left: 20px; 
+// }
+
+hr {
+    border-top: 5px solid #82888e89;
+    width: 100%;
+}

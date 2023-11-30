@@ -1,0 +1,4 @@
+var error_box = $("#form_error_box");
+var error_message = $("#form_error_message");
+error_message.html("<%= @object.errors.full_messages.join('<br>') %>");
+error_box.show();
