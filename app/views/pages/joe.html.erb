@@ -4,15 +4,11 @@
 
 <div class="flex">
     <div class="w-1/4">
-        <%= image_tag("joe-headshot.jpg", alt: "Kai's Headshot", class: "w-full h-auto shadow-lg") %>
+        <%= image_tag("joe-headshot.jpg", alt: "Joe's Headshot", class: "w-full h-auto shadow-lg") %>
         <div class="social-links mt-6 flex-wrap">
-            <h2 class="text-2xl mb-4">Connect with Joe Shanks</h2>
-            <a href="https://www.linkedin.com/in/joseph-shanks-055b9a253/" target="_blank" class="block mb-2">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/joes0206" target="_blank" class="block">
-                <i class="fab fa-github"></i> GitHub
-            </a>
+            <h2 class="text-2xl">Connect with me</h2>
+            <%= link_to "LinkedIn", "https://www.linkedin.com/in/joseph-shanks-055b9a253/", class: "block mb-2 fab fa-linkedin", target: "_blank"%>
+            <%= link_to "Github", "https://github.com/joes0206", class: "block mb-2 fab fa-github", target: "_blank"%>
         </div>
     </div>
 
