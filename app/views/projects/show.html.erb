@@ -7,12 +7,11 @@
         <div class="flex items-center justify-center m-0 ">
             <%= image_tag @images[1], class: "w-1/2 h-auto shadow-lg rounded-md" %>
         </div>        
-        <h4 class="px-64 my-4 text-left"><%= @projectHightlights[2] %></h4>
+        <h4 class="px-64 my-4 text-left"> <%= @projectHightlights[2] %></h4>
         <div class="flex items-center justify-center m-0">
             <%= image_tag @images[0], class: "w-1/2 h-auto shadow-md rounded-md" %>
         </div>    
         <%= link_to "View on Github", @project.repo, target: "_blank", class: "inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4" %>    
-
     </div>
 </div>
 

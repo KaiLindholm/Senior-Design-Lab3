@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
             @projectHightlights = [
                 "For the final lab of the semester we were tasked with creating a portfolio to showcase the projects we had worked on throughout the semester.",
                 "We decided to develop using the Ruby on Rails framework and deploy the portfolio using Heroku.",
-                "A few of the features we implemented were user authentication, and async commenting."
+                "Some notable features of the portfolio include: SSO with github, and a responsive comment section that employs AJAX to update the page without reloading." 
             ]
             @images = []
         elsif @project.name == "Capstone Project"
