@@ -1,0 +1,71 @@
+<!-- FILEPATH: /Users/kailindholm/Documents/Fall 2023/SenDesign /senior-design-lab03/team-portfolio/app/views/pages/kai.html.erb -->
+<div class="profile-container bg-white shadow-md rounded-md mt-10 p-8">
+      <h1 class="text-3xl font-bold mb-4 text-left  ">Joe Shanks' Portfolio</h1>
+
+<div class="flex">
+    <div class="w-1/4">
+        <%= image_tag("joe-headshot.jpg", alt: "Kai's Headshot", class: "w-full h-auto shadow-lg") %>
+        <div class="social-links mt-6 flex-wrap">
+            <h2 class="text-2xl mb-4">Connect with Joe Shanks</h2>
+            <a href="https://www.linkedin.com/in/joseph-shanks-055b9a253/" target="_blank" class="block mb-2">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/joes0206" target="_blank" class="block">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
+
+    <div class="flex-wrap w-1/4 p-4">
+        <h3 class="text-2xl sm:text-xl xs:text-lg mb-4 font-bold mt-4">Bio</h3>
+        <p class="mt-2">
+            I am an electrical engineering student at the University of Iowa. Before coming to university I gained experience working at an agricultural engineering facility, 
+            and also spent 3 months working with frontend mobile app developers.</p>
+        <p class="mt-2">During the Summer of 2022, I lived in Eswatini for a civil engineering project building a 67 meter pedestrian footbridge. 
+                        This allowed me an introduction to civil design concepts, construction management, and international nonprofit functions.</p>
+        <p class="mt-2">In my studies, I have acquired knowledge and experience in a variety of electrical engineering topics including 
+                        analog circuit design, digital signal processing, communications systems, and RF electronics. I'm in the field of 
+                        electrical engineering specifically because I have a passion for building analog music equipment.</p>
+    </div>
+    <div class="flex-wrap w-1/4 p-4">
+        <h3 class="text-2xl sm:text-xl xs:text-lg mb-4 font-bold mt-4">Hobbies</h3>
+        <p class="mt-2">In my free time my main hobby is the study of music. I have been a jazz guitarist for my whole life, and work as a teacher 
+                        of drums, guitar, bass, and piano to people of all ages. </p>
+        <p class="mt-2">I am also incredibly interested in the study of languages, and have achieved fluency in French and differing degrees of competency in Spanish, Portuguese, and SiSwati.  </p>
+        <p class="mt-2"> I love learning about anything that catches my attention including analog electronics, cooking, literature, and painting.</p>
+    </div>
+</div>
+
+</div>
+    <h2 class="text-2xl mt-6 mb-4 text-center">Project Highlights</h2>
+<div class="grid grid-cols-3 gap-4">    
+    <div class="bg-white p-4 shadow-md">
+        <%= image_tag("joe/Project_1.jpg", alt: "Project 1", class: "w-full h-auto shadow-lg") %>
+        <h3 class="text-xl font-bold mt-4">500hz IR Transmitter and Receiver</h3>
+        <p class="mt-2">Shown above is the prototype of a handheld infrared transmitter and it's paired receiver. The receiver's filter stages were designed using knowledge gained from Anton Kruger's "Electronic Circuits" course.</p>
+        <p class="mt-2">It functioned at around 10 feet away even in the presence of ambient light and intentional interference.</p>
+    </div>
+    <div class="bg-white p-4 shadow-md">
+        <%= image_tag("joe/Bridge.jpg", alt: "Project 2", class: "w-full h-auto shadow-lg") %>
+        <h3 class="text-xl font-bold mt-4">Project 2</h3>
+        <p class="mt-2">Here is an image of the project I'm most proud of. This was a year long design project of a 67-meter span 
+                        pedestrian footbridge located in Godloza, Eswatini. </p>
+        <p class="mt-2"> I was the manager of logistics and cultural relations for this 8-week construction project. The bridge was built in a location where about a dozen people including 
+                        children had died attempting to cross a river in order to access vital resources on the other side.</p>
+        <p class="mt-2">The project gave me experience with civil engineering concepts, construction management, and cultural relations in the 
+                        context of an internation non-profit. This project was facilitated by Engineers in Action and Bridges to Prosperity.</p>
+
+        </div>
+    <div class="bg-white p-4 shadow-md">
+        <%= image_tag("joe/Remote.jpg", alt: "Project 3", class: "w-full h-auto shadow-lg") %>
+        <h3 class="text-xl font-bold mt-4">Project 3</h3>
+        <p class="mt-2">Before coming to university, I worked as a quasi-intern in frontend design at an agricultural engingeering company called ControlTech in Bondurant, Iowa. </p>
+        <p class="mt-2"> In that time I learned about production processes, and created a remote control interface and a chart system displaying live data. We used C++ and an Angular 4 framework.</p>
+    </div>
+</div>
+
+<div class="flex flex-wrap w-1/4 items-center justify-center p-4 max-w-md mx-auto space-y-4 mt-8 max-h-80 overflow-y-auto" id="comments">
+    <%= render @comments %>
+</div>
+
+<%= render 'comments/form', page_name: 'joe' %>
