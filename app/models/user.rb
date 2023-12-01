@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
     has_secure_password
+    
+    has_many :comments, dependent: :destroy
 
     validates :name, presence: true, length: {maximum: 25}
     VALID_EMAIL = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
