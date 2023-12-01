@@ -4,7 +4,7 @@
       <h1 class="text-3xl font-bold mb-4 text-left">Kai's Portfolio</h1>
 <div class="flex">
     <div class="w-1/4">
-        <%= image_tag("kai-headshot.jpg", alt: "Kai's Headshot", class: "w-full h-auto shadow-lg") %>
+        <%= image_tag("kai-headshot.jpg", alt: "Kai's Headshot", class: "w-full h-auto shadow-lg rounded-lg") %>
         <div class="social-links mt-6 flex-wrap">
             <h2 class="text-2xl">Connect with me</h2>
             <%= link_to "LinkedIn", "https://www.linkedin.com/in/kai-lindholm/", class: "block mb-2 fab fa-linkedin", target: "_blank"%>
@@ -12,57 +12,56 @@
         </div>
     </div>
 
-    <div class="flex-wrap w-1/4 p-4">
-        <h3 class="text-2xl sm:text-xl xs:text-lg mb-4 font-bold mt-4">Bio</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+    <div class="flex-wrap w-1/4 px-4 mx-4">
+        <h2 class="text-2xl sm:text-xl xs:text-lg font-bold relative m-0">Bio</h2>
+        <p class="shrink mt-2">I am currently a student pursuing Computer Science and Electrical Engineering at the University of Iowa. 
+                        Prior to discovering my enthusiasm for software engineering, I gained experience as a lifeguard and worked as a contractor for a small moving business.</p>
+        <p class="shrink mt-2">During my first internship experience in the summer of 2023, I was fortunate to join Collins Aerospace in Westford, MA. 
+                        I joined the team that maintained the image processing application tailored for the MS177. 
+                        This experience allowed me to refine my expertise in C++ development. 
+                        In particular, I dedicated my efforts to improving the application's configuration system, resulting in a remarkable 150% reduction in computations.</p>
     </div>
-    <div class="flex-wrap w-1/4 p-4">
-        <h3 class="text-2xl sm:text-xl xs:text-lg mb-4 font-bold mt-4">Hobbies</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+     <div class="flex-wrap w-1/4 px-4 mx-4">
+        <h2 class="text-2xl sm:text-xl xs:text-lg font-bold relative m-0">Extracurriculars</h2>
+         <p class="mt-2">For three years, I've been a part of the Pi Kappa Phi fraternity. 
+                        During this period, my peers elected me as the Executive Philanthropy Chair, 
+                        entrusting me with the responsibility of fundraising for our unique cause, The Ability Experience. 
+                        Throughout my tenure, my team effectively raised $4000, contributing to our philanthropic goals.</p>
     </div>
 </div>
-
+ 
 </div>
     <h2 class="text-2xl mt-6 mb-4 text-center">Project Highlights</h2>
 <div class="grid grid-cols-3 gap-4">    
     <div class="bg-white p-4 shadow-md">
-        <%
-=begin%>
- <img src="project1.jpg" alt="Project 1" class="w-full h-auto"> 
-<%
-=end%>
-        <h3 class="text-xl font-bold mt-4">Project 1</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <div class="flex flex-row w-1/2">
+            <%= image_tag("kai/smart-fridge-setup.png", alt: "Project 3", class: "w-full h-auto shadow-lg") %>
+            <%= image_tag("kai/smart-fridge-faces.png", alt: "Project 3", class: "w-full h-auto shadow-lg") %>
+        </div>
+        <h3 class="text-xl font-bold mt-4">Facial Recognition Fridge</h3>
+        <p class="mt-2">For my portion of the IoT(ECE:5550) final project I developed a facial recognition and detection system with a Raspberry Pi 3.</p>
+        <p class="mt-2">I formulated a REST API that facilitated the transfer of detected faces from the Pi to a cloud-based machine for verification using Deepface.</p>
+        <p class="mt-2">Subsequently, I devised an adapter for the Deepface API to conduct training using images stored within a Firebase real-time database. 
+                        This enabled Deepface to continuously update its model whenever a new user registered for our service.</p>
+
+        <%= link_to "View on Github", "https://github.com/KaiLindholm/IoTFinalProject", target: "_blank", class: "inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4" %>    
 
     </div>
     <div class="bg-white p-4 shadow-md">
-        <%
-=begin%>
- <img src="project2.jpg" alt="Project 2" class="w-full h-auto"> 
-<%
-=end%>
-        <h3 class="text-xl font-bold mt-4">Project 2</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <h3 class="text-xl font-bold mt-4">Binary Object Classifier</h3>
+        <p class="mt-2">Designed a CNN architecture for the binary classification task to determine whether a cat, or a dog is present in an image.</p>
+        <p class="mt-2">Improved the robustness of the model by generating new images based off the input dataset.</p>
+        <p class="mt-2">The model was able to produce a correct result 85% of the time. </p>
 
+        <%= link_to "View on Github", "https://github.com/KaiLindholm/Convolutional-NN-demo", target: "_blank", class: "inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4" %>    
     </div>
     <div class="bg-white p-4 shadow-md">
-        <%
-=begin%>
- <img src="project3.jpg" alt="Project 3" class="w-full h-auto"> 
-<%
-=end%>
-        <h3 class="text-xl font-bold mt-4">Project 3</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <h3 class="text-xl font-bold mt-4">SaaS Marketplace (WiP)</h3>
+        <p class="mt-2">Deploying a full-stack buy-sell marketplace platform on Heroku by leveraging the Rails framework, and
+                        containerization within docker.</p>
+        <p class="mt-2">Followed a strict test driven development scheme utilizing cucumber, and rspec to ensure maximal test coverage
+                        within the application </p>
+        <p class="mt-2">Worked closely with a team by employing agile strategries to ensure all members are as effective as possible</p>
     </div>
 </div>
 
