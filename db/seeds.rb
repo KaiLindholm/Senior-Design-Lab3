@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Project.create(name: 'IoT Temperature System', repo: 'https://github.com/KaiLindholm/Senior-Design-Lab01', description: 'A system that monitors the temperature of a room and sends the data to a web server.')
+Project.create(name: 'RF Transmitter', repo: '', description: 'An RF transmitter to determine if the area between it and the receiver are being blocked')
+Project.create(name: 'Team Portfolio', repo: 'https://github.com/KaiLindholm/Senior-Design-Lab3', description: 'A portfolio for the team to show off their work')
+Project.create(name: 'Capstone Project', repo: '', description: 'A satellite receiver that can be used to receive weather data from the GOES satellite')
