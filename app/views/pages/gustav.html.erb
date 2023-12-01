@@ -1,22 +1,16 @@
-<!-- FILEPATH: /Users/kailindholm/Documents/Fall 2023/SenDesign /senior-design-lab03/team-portfolio/app/views/pages/kai.html.erb -->
 <% content_for :title, "Gustav's Portfolio" %>
 <div class="profile-container bg-white shadow-md rounded-md mt-10 p-8">
-      <h1 class="text-3xl font-bold mb-4 text-left  ">Kai's Portfolio</h1>
+      <h1 class="text-3xl font-bold mb-4 text-left  ">Gustav's Portfolio</h1>
 
 <div class="flex">
     <div class="w-1/4">
-        <%= image_tag("gustav-headshot.jpg", alt: "Kai's Headshot", class: "w-full h-auto shadow-lg") %>
+        <%= image_tag("gustav-headshot.jpg", alt: "Gustav's Headshot", class: "w-full h-auto shadow-lg") %>
         <div class="social-links mt-6 flex-wrap">
-            <h2 class="text-2xl mb-4">Connect with me</h2>
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="block mb-2">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/yourusername" target="_blank" class="block">
-                <i class="fab fa-github"></i> GitHub
-            </a>
+            <h2 class="text-2xl">Connect with me</h2>
+            <%= link_to "LinkedIn", "https://www.linkedin.com/", class: "block mb-2 fab fa-linkedin", target: "_blank"%>
+            <%= link_to "Github", "https://github.com/", class: "block mb-2 fab fa-github", target: "_blank"%>
         </div>
     </div>
-
     <div class="flex-wrap w-1/4 p-4">
         <h3 class="text-2xl sm:text-xl xs:text-lg mb-4 font-bold mt-4">Bio</h3>
         <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
@@ -35,39 +29,20 @@
     <h2 class="text-2xl mt-6 mb-4 text-center">Project Highlights</h2>
 <div class="grid grid-cols-3 gap-4">    
     <div class="bg-white p-4 shadow-md">
-        <%
-=begin%>
- <img src="project1.jpg" alt="Project 1" class="w-full h-auto"> 
-<%
-=end%>
-        <h3 class="text-xl font-bold mt-4">Project 1</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <h3 class="text-xl font-bold mt-4">Dual-Tone Multi-Frequency (DTMF) signal encoder/decoder using MATLAB</h3>
+        <p class="mt-2">The two functions convert between keypad values (0123456789*#) and audio signals encoded with the corresponding tone pairs</p>
+        <p class="mt-2">To achieve a robust design, the encoder has extensive input validation and the decoder uses the Fourier Transform to correctly identify any valid signal</p>
+        <p class="mt-2">A script is included that tests many possible use cases.</p>
 
     </div>
     <div class="bg-white p-4 shadow-md">
-        <%
-=begin%>
- <img src="project2.jpg" alt="Project 2" class="w-full h-auto"> 
-<%
-=end%>
-        <h3 class="text-xl font-bold mt-4">Project 2</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-
+        <h3 class="text-xl font-bold mt-4">Graphing voltmeter embedded system using C and AVR Assembly</h3>
+        <p class="mt-2">After the user defines a sampling rate, the system plots data points as they are measured, also recording the data and related statistics for later use.</p>
+        <p class="mt-2">The system logic and OLED interface are programmed in C, whereas the pushbutton debouncing and a few calculation pipelines are written in Assembly.</p>
     </div>
     <div class="bg-white p-4 shadow-md">
-        <%
-=begin%>
- <img src="project3.jpg" alt="Project 3" class="w-full h-auto"> 
-<%
-=end%>
-        <h3 class="text-xl font-bold mt-4">Project 3</h3>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
-        <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc auctor aliquet ultrices.</p>
+        <h3 class="text-xl font-bold mt-4">Infrared (IR) transmitter and hardware-filtered IR receiver circuits</h3>
+        <p class="mt-2">When the transmitter sends a 5 kHz signal, the receiver filters and amplifies it, producing a steady output that can drive a load such as a small motor.</p>
     </div>
 </div>
 
@@ -75,4 +50,4 @@
     <%= render @comments %>
 </div>
 
-<%= render 'comments/form', page_name: 'kai' %>
+<%= render 'comments/form', page_name: 'gustav' %>

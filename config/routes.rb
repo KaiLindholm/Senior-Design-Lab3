@@ -2,7 +2,7 @@ Rails.application.routes.draw do
     resources :user, only: %i[new create]
     resources :projects, only: %i[show]
     resources :sessions, only: %i[new create]
-    resources :comments
+    resources :comments, only: %i[new create destroy]
 
     root :to => 'pages#index'
 
