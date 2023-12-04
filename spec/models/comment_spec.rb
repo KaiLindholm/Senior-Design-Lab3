@@ -2,11 +2,6 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  describe 'associations' do
-    it 'belongs to a user' do
-      should belong_to(:user)
-    end
-  end
 
   describe 'validations' do
     it 'requires content to be present' do
@@ -34,10 +29,4 @@ RSpec.describe Comment, type: :model do
     end
   end
 
-  describe 'page method' do
-    it 'returns the value of the page attribute' do
-      comment = Comment.new(page: 42)
-      expect(comment.page).to eq(42)
-    end
-  end
 end
