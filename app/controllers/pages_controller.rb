@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+    before_action :ensure_signed_in!, only: [:kai, :james, :joe, :gustav]
     def index
         @comments = Comment.where(page: "team")
         @project1 = Project.find_by(name: "IoT Temperature System")

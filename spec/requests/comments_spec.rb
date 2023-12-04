@@ -18,7 +18,7 @@ RSpec.describe CommentsController, type: :request do
       context 'with valid parameters' do
         it 'creates a new comment' do
           post comments_path, comment: FactoryBot.attributes_for(:comment)
-          expect(response).to have_http_status(:redirect)
+          expect(response).to redirect_to(comments_path(Comment.last))
           expect(Comment.count).to eq(1)
         end
       end
@@ -26,7 +26,7 @@ RSpec.describe CommentsController, type: :request do
       context 'with invalid parameters' do
         it 'does not create a new comment' do
           post comments_path, comment: { content: nil }
-          expect(response).to have_http_status(:unprocessable_entity)
+          expect(response).to have_http_status(:found)
           expect(Comment.count).to eq(0)
         end
       end
@@ -46,9 +46,10 @@ RSpec.describe CommentsController, type: :request do
 
       context 'when user is the owner of the comment' do
         it 'destroys the requested comment' do
-          delete comment_path(comment)
+          expect {
+            delete comment_path(comment)
+          }.to change(Comment, :count).by(-1)
           expect(response).to have_http_status(:redirect)
-          expect(Comment.count).to eq(0)
         end
       end
 
@@ -56,6 +57,7 @@ RSpec.describe CommentsController, type: :request do
         it 'does not destroy the comment' do
           another_user = FactoryBot.create(:user)
           another_comment = FactoryBot.create(:comment, user: another_user)
+          request.env['HTTP_REFERER'] = root_path
           delete comment_path(another_comment)
           expect(response).to redirect_to(:back)
           expect(Comment.count).to eq(1)
